@@ -9,7 +9,7 @@
 <div class="h-screen bg-gray-300">
 
 {{-- Cards --}}
-<div class="flex justify-center mt-5">
+<div class="flex m-2 justify-evenly">
 
     @if (sizeof($products)==0)
     
@@ -19,7 +19,7 @@
         
     @endif
 
-    <ul>
+    
         @foreach ($products as $index => $product)
             
             
@@ -39,8 +39,8 @@
                         <span class="badge">Oficial Store</span>
               </div>
         
-                    <h2 class="product-title" title="Best Products Ever ">
-                        <p>{{ $product->name }}</p>
+                    <h2 class="product-title" title={{ $product->name }}>
+                        {{ $product->name }} 
                     </h2>
                     <div class="flex justify-between">
                         <span class="badge">Stock: {{$product->stock}}</span>

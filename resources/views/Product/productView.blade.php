@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title',"Titulo")
+@section('title', $product->name)
 
 @section('content')
 
@@ -9,11 +9,11 @@
 <div
   class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
   <div
-    class="relative overflow-hidden bg-cover bg-no-repeat"
+    class="relative overflow-hidden bg-cover bg-no-repeat flex justify-center"
     data-te-ripple-init
     data-te-ripple-color="light">
     <img
-      class="rounded-t-lg"
+      class="rounded-t-lg mt-4 mb-6"
       src="{{$product->imagen}}"
       alt={{$product->imagen}} />
     <a href="#!">

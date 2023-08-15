@@ -24,14 +24,11 @@ Route::controller(HomeController::class)->group(function(){
     //RUTA PARA ACCESO A LA VISTA DEL PRODUCTO {}
     Route::get('/home/productView/{id}','show')->name('products.show');
 });
-
 /*LOGIN*/
 Route::controller(LoginController::class)->group(function(){
     // RUTA PARA EL LOGIN
     Route::get('/login','index');    
 });
-
-
 /*ADMIN*/
 Route::controller(AdminController::class)->group(function(){
     //VISTA DE PERFIL DEL ADMIN {}
