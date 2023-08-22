@@ -22,27 +22,59 @@
 
       <div class="flex m-2">
         <label class="m-2">SKU</label>
-        <input type="text" name="sku">
+        <input type="text" name="sku" value="{{old('sku')}}">
+
+        @error('sku')
+        <br>
+        <small>{{$message}}</small>
+        <br>            
+        @enderror
       </div>
 
       <div class="flex  m-1">
         <label class="m-2">Name of the Product</label>
-        <input type="text" name="name">
+        <input type="text" name="name" value="{{old('name')}}">
+        
+        @error('name')
+          <br>
+          <small>{{$message}}</small>
+          <br>            
+        @enderror
+
       </div>
 
       <div class="flex  m-1">
         <label class="m-2">Imagen</label>
-        <input type="text" name="imagen">
+        <input type="text" name="imagen" value="{{old('imagen')}}">
+
+        @error('imagen')
+        <br>
+        <small>{{$message}}</small>
+        <br>            
+      @enderror
+
       </div>
 
       <div class="flex  m-1">
         <label class="m-2">Add the stock</label>
-        <input type="text" name="stock">
+        <input type="text" name="stock" value="{{old('stock')}}">
+
+        @error('stock')
+        <br>
+        <small class="items-center">{{$message}}</small>
+        <br>            
+        @enderror
       </div>
 
       <div class="flex  m-1">
         <label class="m-2">Add the score</label>
-        <input type="text" name="calificacion">
+        <input type="text" name="calificacion" value="{{old('calificacion')}}">
+
+        @error('calificacion')
+        <br>
+        <small>{{$message}}</small>
+        <br>            
+      @enderror
       </div>
       
     

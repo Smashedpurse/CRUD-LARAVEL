@@ -35,14 +35,17 @@
     </p>
 
     <div class="text-center text-white border-s-violet-900">
-      <a href="{{route('products.edit',$product)}}"><p>Editar Producto</p></a>
+      <a href="{{route('products.edit',$product)}}"><span>Editar Producto</span></a> 
+
+      <form action="{{route('products.delete',$product)}}" method="POST">
+        @csrf
+        @method('delete')
+        <button type="submit">Eliminar Producto</button> 
+      </form>
+
     </div>
 
-    <form action="{{route('products.delete',$product)}}" method="POST">
-      @csrf
-      @method('delete')
-      <button type="submit">Eliminar Producto</button>
-    </form>
+
     
   </div>
 </div>
